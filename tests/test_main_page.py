@@ -1,6 +1,4 @@
-import pytest
-
-from MainPage import MainPage
+from pages.MainPage import MainPage
 
 
 class TestMainPage:
