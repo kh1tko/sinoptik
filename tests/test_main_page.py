@@ -1,3 +1,5 @@
+import pytest
+
 from pages.MainPage import MainPage
 
 
@@ -59,3 +61,11 @@ class TestMainPage:
         number_of_weather_day = page.get_result_change_weather_days()
         class_attribute_value = number_of_weather_day.get_attribute('class')
         assert class_attribute_value == 'bd7'
+
+    def test_click_show_weather_linkblock(self, chrome):
+        page = MainPage(chrome)
+        page.open()
+        page.scroll_down()
+        page.click_show_weather_linkblock()
+        element = page.get_result_show_weather_linkblock()
+        assert 'display: block;' in element.get_attribute('style')

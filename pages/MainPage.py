@@ -17,6 +17,8 @@ class MainPage:
         self.change_weather_day_six = (By.CSS_SELECTOR, '#bd6 > p:nth-child(1) > a')
         self.change_weather_day_seven = (By.CSS_SELECTOR, '#bd7 > p:nth-child(1) > a')
         self.result_change_weather_days = (By.CSS_SELECTOR, 'div#blockDays')
+        self.show_weather_linkblock = (By.CSS_SELECTOR, 'h2.show-weather-linkblock > a')
+        self.result_show_weather_linkblock = (By.CSS_SELECTOR, '#weatherLinks')
 
     def open(self) -> 'MainPage':
         self.driver.get(self.url)
@@ -33,6 +35,12 @@ class MainPage:
 
     def scroll_down(self) -> None:
         self.driver.execute_script('window.scrollBy(0, 500);')
+
+    def click_show_weather_linkblock(self):
+        self.driver.find_element(*self.show_weather_linkblock).click()
+
+    def get_result_show_weather_linkblock(self):
+        return self.driver.find_element(*self.result_show_weather_linkblock)
 
     def get_result_search_city(self):
         return self.driver.find_element(*self.result_city_name).text
