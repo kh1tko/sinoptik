@@ -3,6 +3,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 
 
 class MainPage:
+
     def __init__(self, driver: WebDriver):
         self.url = 'https://ua.sinoptik.ua/'
         self.driver = driver
