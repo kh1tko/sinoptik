@@ -16,7 +16,7 @@ Project Structure
 
 - conftest.py: pytest configuration file with a fixture to initialize the browser.
 - pages/: Directory containing classes for interacting with elements on pages.
-- tests.py: File with a set of test scenarios.
+- tests/tests_main_page.py: File with a set of test scenarios.
 
 Test Descriptions
 

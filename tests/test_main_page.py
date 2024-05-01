@@ -1,4 +1,4 @@
-from pages.MainPage import MainPage
+from sinoptik.pages.MainPage import MainPage
 
 
 class TestMainPage:
