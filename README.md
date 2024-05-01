@@ -26,7 +26,7 @@ Weather Forecast Change Tests:
 - Navigates to the weather forecast for different days and verifies the displayed information.
 Display Weather Links Block Test:
 - Scrolls down the page and checks the display of the weather links block.
-- 
+
 Adding New Tests
 - To add new tests for the web application, create new methods in the tests.py file.
 - Use methods from the MainPage class in pages/MainPage.py to interact with page elements.
