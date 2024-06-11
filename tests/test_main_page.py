@@ -14,7 +14,6 @@ class TestMainPage:
     def test_change_weather_day_two(self, chrome):
         page = MainPage(chrome)
         page.open()
-
         page.click_change_weather_day_two()
         number_of_weather_day = page.get_result_change_weather_days()
         class_attribute_value = number_of_weather_day.get_attribute('class')
